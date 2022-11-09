@@ -1,5 +1,6 @@
 ---
 import '../style/landingpage.css'
+import { GoogleAnalytics } from 'astro-google-analytics';
 
 export interface Props {
 	title: string;
@@ -17,6 +18,7 @@ const { title, description } = Astro.props as Props;
   <meta name="description" content={description}>
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 	<title>{title}</title>
+   <Analytics id="G-VDH3EGMHQL" />
 </head>
 <body>
 	<slot />

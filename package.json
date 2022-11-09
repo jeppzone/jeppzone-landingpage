@@ -11,5 +11,8 @@
   "devDependencies": {
     "astro": "^1.0.0",
     "prettier-plugin-astro": "^0.7.0"
+  },
+  "dependencies": {
+    "astro-google-analytics": "^1.0.1"
   }
 }
