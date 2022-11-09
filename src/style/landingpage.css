@@ -3,12 +3,6 @@
 :root {
   --main-family: 'Poppins', sans-serif;
   --color-bg: linear-gradient(180deg, #FFFFFF 0%, #AEC6DC 100%);
-
-  /* Controls the blob blur gradient colors within the main tag's svg */
-  --top-right-blur-1: rgb(15, 157, 245);
-  --top-right-blur-2: rgb(15, 157, 245);
-  --bttm-left-blur-1: rgb(231, 117, 52);
-  --bttm-left-blur-2: rgb(231, 117, 52);
 }
 
 html {
@@ -133,4 +127,18 @@ footer {
 
 footer img {
   width: 20px;
+}
+
+@media(max-width: 600px){
+  .bttns{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bttn{
+    margin: 1rem;
+  }
+  .header h2 {
+    width: 80%;
+  }
 }
