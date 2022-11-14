@@ -1,10 +1,10 @@
 ---
-import '../style/landingpage.css'
-import { GoogleAnalytics } from 'astro-google-analytics';
+import "../style/landingpage.css";
+import { GoogleAnalytics } from "astro-google-analytics";
 
 export interface Props {
-	title: string;
-  description: string
+  title: string;
+  description: string;
 }
 
 const { title, description } = Astro.props as Props;
@@ -12,23 +12,25 @@ const { title, description } = Astro.props as Props;
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width">
-  <meta name="description" content={description}>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<title>{title}</title>
-   <GoogleAnalytics id="G-VDH3EGMHQL" />
-</head>
-<body>
-	<slot />
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{title}</title>
+    <GoogleAnalytics id="G-VDH3EGMHQL" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1148368253097851" crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
   :root {
     --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem); 
+    --font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem);
     --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
     --color-text: hsl(12, 5%, 4%);
     /* --color-bg: hsl(10, 21%, 95%); */
@@ -49,7 +51,6 @@ const { title, description } = Astro.props as Props;
     font-size: var(--font-size-lg);
   }
   :global(code) {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
   }
 </style>
